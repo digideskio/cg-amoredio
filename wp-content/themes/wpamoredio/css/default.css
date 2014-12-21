@@ -1,0 +1,300 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400,100);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+/*------------ MIXINS ----------------*/
+/*------------ TYPOGRAPHY ------------*/
+body {
+  color: #4a5766;
+  font-family: 'Raleway',sans-serif;
+  font-size: 14px;
+  line-height: 1.625; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Roboto Slab',sans-serif;
+  letter-spacing: -0.03em; }
+
+h3, .h3 {
+  font-size: 22px; }
+
+h2, .h2 {
+  font-size: 45px;
+  color: #5bc3b2; }
+  @media (max-width: 767px) {
+    h2, .h2 {
+      font-size: 36px; } }
+
+h1, .h1 {
+  font-size: 68px;
+  font-weight: 100;
+  color: #ff6e6e; }
+  @media (max-width: 767px) {
+    h1, .h1 {
+      font-size: 54.4px; } }
+
+blockquote {
+  border-left: none;
+  text-align: center; }
+
+pre {
+  font-family: 'Inconsolata', monospace;
+  color: #4a5766;
+  border: none; }
+
+.nested-ol {
+  padding-left: 20px; }
+  .nested-ol li > ol {
+    padding-left: 20px; }
+  .nested-ol li > ol > li {
+    list-style: lower-latin; }
+
+.table-bible-quote tr > td:first-child {
+  font-weight: bold; }
+
+/*------------ LAYOUT ------------*/
+.about-us, .pw {
+  background: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_grey.png"); }
+
+.events, .material {
+  background: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_white.png"); }
+
+.header {
+  background: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_alizherin.png"); }
+
+.ministries {
+  background: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_green.png"); }
+
+.events .events-cal, .ministries .min-mod, .ministries .min-mod-join {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; }
+
+.ministries .mins-cm, .ministries .mins-mat, .ministries .mins-mbr, .ministries .mins-pry, .ministries .mins-pw {
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  background-position: top center; }
+
+.about-us:after, .events:after, .ministries:after, .material:after, .pw:after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+  position: absolute; }
+
+body {
+  padding-bottom: 300px; }
+
+.section-heading {
+  text-align: center; }
+
+.about-us:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2P88uXLfwYiACNIDTGKwQoJKebh4WGEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgADxBe9gffnzwAAAABJRU5ErkJggg==") repeat-x; }
+
+.events .event-img {
+  padding: 20px; }
+.events .event-text {
+  margin-top: 20px; }
+.events:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAALklEQVQIW2P8DwQMRABGkBpiFIMVElLMCALItmIzGaYGRSG6ycgGYSiEKUa3DQBFHxf/sZH/dgAAAABJRU5ErkJggg==") repeat-x; }
+.events .events-cal {
+  padding-top: 80px;
+  position: relative;
+  margin: 20px 0; }
+  .events .events-cal .h3 {
+    text-align: center;
+    margin-top: 0;
+    background: #ff6e6e;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.3); }
+  .events .events-cal hr {
+    margin: 5px 0; }
+  .events .events-cal a {
+    color: #ff6e6e; }
+
+.ministries .section-heading {
+  color: #fff; }
+.ministries .mins-cm {
+  background-image: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-cm.png"); }
+.ministries .mins-mat {
+  background-image: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-mat.png"); }
+.ministries .mins-mbr {
+  background-image: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-mbr.png"); }
+.ministries .mins-pry {
+  background-image: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-pry.png"); }
+.ministries .mins-pw {
+  background-image: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-pw.png"); }
+.ministries .min-mod-join {
+  background: #4a5766;
+  text-align: center; }
+  .ministries .min-mod-join .min-text {
+    margin: 0;
+    color: #fff; }
+    .ministries .min-mod-join .min-text .h3 {
+      color: #fff; }
+.ministries .min-text {
+  margin-left: 100px;
+  margin-top: -80px;
+  min-height: 80px; }
+  .ministries .min-text .h3 {
+    margin-top: 0;
+    color: #ff6e6e; }
+.ministries:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2OMPrzpPwMRgBGkhhjFYIWEFC+19WOEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgDwJRWlci2nPQAAAABJRU5ErkJggg==") repeat-x; }
+
+.material .main-title:before {
+  content: "";
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  background: url("https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/opt_ico_quote.svg") no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -10px; }
+  @media (max-width: 767px) {
+    .material .main-title:before {
+      display: block;
+      margin: 0 auto; } }
+.material .ans {
+  overflow: hidden;
+  max-height: 0;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: tint(#5bc3b2, 95);
+  padding: 0 10px;
+  border-left: 4px solid #5bc3b2;
+  margin: 10px 0; }
+  .material .ans:before {
+    content: "Jawaban:";
+    font-weight: bold;
+    color: #5bc3b2; }
+  .facil .material .ans {
+    max-height: 200px;
+    padding: 10px; }
+.material section h3 {
+  color: #ff6e6e;
+  border-bottom: 1px solid tint(#4a5766, 80);
+  line-height: 1.625; }
+.material #facil {
+  font-size: 14px;
+  margin: 0;
+  position: relative;
+  top: 10px; }
+.material:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAALklEQVQIW2P8DwQMRABGkBpiFIMVElLMCALItmIzGaYGRSG6ycgGYSiEKUa3DQBFHxf/sZH/dgAAAABJRU5ErkJggg==") repeat-x; }
+
+.pw #songbook-table {
+  background: tint(#4a5766, 99); }
+.pw pre {
+  background-color: #fff; }
+.pw .song-title {
+  color: #5bc3b2; }
+.pw:after {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2P88uXLfwYiACNIDTGKwQoJKebh4WGEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgADxBe9gffnzwAAAABJRU5ErkJggg==") repeat-x; }
+
+.width-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; }
+  @media (max-width: 767px) {
+    .width-max {
+      padding: 15px; } }
+
+.table-wrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 300px; }
+
+.clr-text {
+  color: #4a5766; }
+
+.clr-primary {
+  color: #ff6e6e; }
+
+.clr-green {
+  color: #5bc3b2; }
+
+/*------------ HEADER ------------*/
+.header {
+  padding: 20px;
+  position: relative; }
+  .header:after {
+    content: "";
+    display: block;
+    height: 10px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2P8n5f3n4EIwAhSQ4xisEJCihknTWKEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgAHzRW7EIhIqQAAAABJRU5ErkJggg==") repeat-x;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; }
+
+/*------------ TABLESORTER ------------*/
+.tablesorter-headerRow .tablesorter-header-inner {
+  cursor: pointer; }
+.tablesorter-headerRow .tablesorter-headerAsc .tablesorter-header-inner:before {
+  content: "\f0dd \00a0 ";
+  font-family: 'FontAwesome'; }
+.tablesorter-headerRow .tablesorter-headerDesc .tablesorter-header-inner:before {
+  content: "\f0de \00a0 ";
+  font-family: 'FontAwesome'; }
+.tablesorter-headerRow .tablesorter-headerUnSorted .tablesorter-header-inner:before {
+  content: "\f0dc \00a0 ";
+  font-family: 'FontAwesome'; }
+
+/*------------ JQUERY TRANSPOSER ------------*/
+span.c {
+  font-weight: bold;
+  color: #ff6e6e; }
+
+.transpose-keys {
+  margin: 10px 0;
+  overflow: auto;
+  font-size: 14px;
+  font-weight: bold; }
+  .transpose-keys ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .transpose-keys a {
+    display: block;
+    float: left;
+    width: 2.25em;
+    text-align: center;
+    margin: 0 .25em .25em 0;
+    color: tint(#4a5766, 50);
+    background: tint(#4a5766, 90);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: .4em 0;
+    border: solid 1px transparent;
+    border-bottom: solid 1px tint(#4a5766, 80);
+    outline: none; }
+    .transpose-keys a:hover {
+      background: tint(#4a5766, 95); }
+    .transpose-keys a.selected {
+      background: #5bc3b2;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      border-bottom: solid 1px #318779; }
+  .transpose-keys li {
+    list-style: none; }

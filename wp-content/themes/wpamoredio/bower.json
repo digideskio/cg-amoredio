@@ -1,0 +1,25 @@
+{
+  "name": "wpamoredio",
+  "version": "0.1.0",
+  "homepage": "https://github.com/philipskokoh/cg-amoredio",
+  "authors": [
+    "philipskokoh@users.noreply.github.com <philipskokoh@gmail.com>"
+  ],
+  "description": "Amoredio website theme",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.2.0",
+    "normalize.css": "~3.0.2",
+    "modernizr": "~2.8.3"
+  }
+}

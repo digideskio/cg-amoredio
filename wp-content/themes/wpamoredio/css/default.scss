@@ -1,0 +1,455 @@
+//GOOGLE FONT IMPORT
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400,100);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+//VARIABLES
+//colors
+$clr-text:#4A5766;
+$clr-primary:#FF6E6E;
+$clr-green:#5BC3B2;
+//layout
+$gaps:20px;
+$max-width:1200px;
+//media queries
+$xs:767px;
+$sm:767px;
+$md:991px;
+
+/*------------ MIXINS ----------------*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($val) {
+  -moz-box-shadow: $val;
+  -webkit-box-shadow: $val;
+  box-shadow: $val;
+}  
+
+@mixin text-shadow($val) {
+  text-shadow: $val;
+}
+
+@mixin transition($val) {
+  -moz-transition: $val;
+  -o-transition: $val;
+  -webkit-transition: $val;
+  transition: $val;
+}
+/*------------ TYPOGRAPHY ------------*/
+
+$base-font-size:14px;
+$base-line-height:1.625;// 23/14
+
+$h3-size:floor($base-line-height*$base-font-size*1);
+$h2-size:floor($base-line-height*$base-font-size*2);
+$h1-size:floor($base-line-height*$base-font-size*3);
+
+body{
+  color:$clr-text;
+  font-family: 'Raleway',sans-serif;
+  font-size: 14px;
+  line-height:1.625;
+}
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6
+{
+  font-family: 'Roboto Slab',sans-serif;
+  letter-spacing:-0.03em;
+}
+
+h3,.h3{
+  font-size:$h3-size;
+}
+
+h2,.h2{
+  font-size:$h2-size;
+  color:$clr-green;
+  @media (max-width:$xs){
+    font-size:0.8*$h2-size;
+  }
+}
+
+h1,.h1{
+  font-size:$h1-size;
+  font-weight: 100;
+  color:$clr-primary;
+  @media (max-width:$xs){
+    font-size:0.8*$h1-size;
+  }
+}
+
+blockquote{
+  border-left:none;
+  text-align: center;
+}
+
+pre{
+  font-family: 'Inconsolata', monospace;
+  color:$clr-text;
+  border:none;
+}
+
+.nested-ol{
+  padding-left:$gaps;
+  li>ol{
+    padding-left:$gaps;
+  }
+  li>ol>li{
+    list-style:lower-latin;
+  }
+}
+
+.table-bible-quote{
+  tr>td:first-child{
+    font-weight: bold;
+  }
+}
+
+/*------------ LAYOUT ------------*/
+//DATA URI
+$triangle-down-primary:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2P8n5f3n4EIwAhSQ4xisEJCihknTWKEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgAHzRW7EIhIqQAAAABJRU5ErkJggg==';
+$triangle-down-grey:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2P88uXLfwYiACNIDTGKwQoJKebh4WGEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgADxBe9gffnzwAAAABJRU5ErkJggg==';
+$triangle-down-white:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAALklEQVQIW2P8DwQMRABGkBpiFIMVElLMCALItmIzGaYGRSG6ycgGYSiEKUa3DQBFHxf/sZH/dgAAAABJRU5ErkJggg==';
+$triangle-down-green:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2OMPrzpPwMRgBGkhhjFYIWEFC+19WOEK8SlGKQIJIeiEF0xTBFWhTDFyIpAYgDwJRWlci2nPQAAAABJRU5ErkJggg==';
+$triangle-down-plain-white:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAALklEQVQIW2P8DwQMRABGkBpiFIMVElLMCALItmIzGaYGRSG6ycgGYSiEKUa3DQBFHxf/sZH/dgAAAABJRU5ErkJggg==';
+
+//BG PATTERNS
+%bg-pattern-grey{
+  background:url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_grey.png');  
+};
+%bg-pattern-white{
+  background:url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_white.png');
+};
+%bg-txture-red{
+  background: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_alizherin.png');
+};
+%bg-txture-green{
+  background: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/bg_green.png');
+};
+
+%bg-container{
+  background: #fff;
+  @include border-radius(0.25*$gaps);
+  padding:$gaps;
+  @include box-shadow(0 3px 6px rgba(0,0,0,0.3));
+  margin-bottom:$gaps;
+}
+%min-images{
+  height:80px;
+  width:80px;
+  @include border-radius(40px);
+  background-position:top center;
+}
+%triangle-pattern{
+  content:"";
+  display:block;
+  height:10px;
+  width:100%;
+  position:absolute;
+}
+body{
+  padding-bottom:300px;
+}
+.section-heading{
+  text-align: center;
+}
+.about-us{
+  @extend %bg-pattern-grey;
+  &:after{
+    @extend %triangle-pattern;
+    background: url($triangle-down-grey) repeat-x;
+  }
+}
+
+//EVENTS
+.events{
+  @extend %bg-pattern-white;
+  .event-img{
+    padding:$gaps;
+  }
+  .event-text{
+    margin-top:20px;
+  }
+  &:after{
+    @extend %triangle-pattern;
+    background: url($triangle-down-white) repeat-x;
+  }
+  .events-cal{
+    @extend %bg-container;
+    padding-top:80px;
+    position:relative;
+    margin:$gaps 0;
+    .h3{
+      text-align: center;
+      margin-top:0;
+      background: $clr-primary;
+      position:absolute;
+      width:100%;
+      padding:$gaps;
+      top:0;
+      left:0;
+      @include border-radius(0.25*$gaps);
+      color:#fff;
+      @include text-shadow(0 -2px 0 rgba(0,0,0,0.3)); 
+    }
+    hr{
+      margin:0.25*$gaps 0;
+    }
+    a{
+      color:$clr-primary;
+    }
+  }
+}
+
+//MINISTRIES
+.ministries{
+  @extend %bg-txture-green;
+  .section-heading{
+    color:#fff;
+  }
+  .mins-cm{
+    @extend %min-images;
+    background-image: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-cm.png');
+  }
+  .mins-mat{
+    @extend %min-images;
+    background-image: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-mat.png');
+  }
+  .mins-mbr{
+    @extend %min-images;
+    background-image: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-mbr.png');
+  }
+  .mins-pry{
+    @extend %min-images;
+    background-image: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-pry.png');
+  }
+  .mins-pw{
+    @extend %min-images;
+    background-image: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/min-pw.png');
+  }
+  .min-mod{
+    @extend %bg-container;
+  }
+  .min-mod-join{
+    @extend .min-mod;
+    background:$clr-text;
+    text-align: center;
+    
+    .min-text{
+      margin:0;
+      color:#fff;
+      .h3{
+        color:#fff;
+      }
+    }
+  }
+  .min-text{
+    margin-left:100px;
+    margin-top:-80px;
+    min-height:80px;
+    .h3{
+      margin-top:0;
+      color:$clr-primary; 
+    }
+  }
+  &:after{
+    @extend %triangle-pattern;
+    background: url($triangle-down-green) repeat-x;
+  }
+}
+
+//MATERIAL
+.material{
+  @extend %bg-pattern-white;
+  .main-title{
+    &:before{
+      content:"";
+      display:inline-block;
+      height:70px;
+      width:70px;
+      background: url('https://dl.dropboxusercontent.com/u/121042348/AmoreDio/website/html-ad/img/opt_ico_quote.svg') no-repeat;
+      vertical-align: middle;
+      margin-right: 0.5*$gaps;
+      margin-top: -10px; 
+      @media(max-width:767px){
+        display:block;
+        margin:0 auto;
+      }
+    }
+  }
+  .ans{
+    overflow:hidden;
+    max-height:0;
+    @include transition(all 0.5s ease);
+    background-color:tint($clr-green,95);
+    padding:0 $gaps*0.5;
+    border-left:4px solid $clr-green;
+    margin:$gaps*0.5 0;
+    &:before{
+      content:"Jawaban:";
+      font-weight:bold;
+      color:$clr-green;
+    }
+    
+    .facil &{
+      max-height:200px;
+      padding:$gaps*0.5;
+    }
+  }
+  section{
+    h3{
+      color:$clr-primary;
+      border-bottom:1px solid tint($clr-text,80);
+      line-height: 1.625;
+    }
+  }
+  #facil{
+    font-size:14px;
+    margin:0;
+    position:relative; 
+    top:10px;
+  }
+  &:after{
+    @extend %triangle-pattern;
+    background: url($triangle-down-white) repeat-x;
+  }
+}
+
+//PW
+.pw{
+  @extend %bg-pattern-grey;
+  #songbook-table{
+    background: tint($clr-text,99); 
+  }
+  pre{
+    background-color: #fff;
+  }
+  .song-title{
+    color:$clr-green; 
+  }
+  &:after{
+    @extend %triangle-pattern;
+    background: url($triangle-down-grey) repeat-x;
+  }
+}
+
+//UTILITIES
+.width-max{
+  max-width:$max-width;
+  margin:0 auto;
+  padding:$gaps;
+  @media(max-width:$xs){
+    padding:15px;
+  }
+}
+.table-wrap{
+  overflow-x:hidden;
+  overflow-y:auto;
+  max-height:300px;
+}
+.clr-text{
+  color:$clr-text;
+}
+.clr-primary{
+  color:$clr-primary;
+}
+.clr-green{
+  color:$clr-green;
+}
+
+/*------------ HEADER ------------*/
+.header{
+  @extend %bg-txture-red;
+  padding:$gaps;
+  position:relative;
+  &:after{
+    content:"";
+    display:block;
+    height:10px;
+    background: url($triangle-down-primary)repeat-x; 
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+  }
+}
+
+/*------------ TABLESORTER ------------*/
+.tablesorter-headerRow{
+  .tablesorter-header-inner{
+    cursor:pointer;
+  }
+  .tablesorter-headerAsc{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0dd \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  .tablesorter-headerDesc{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0de \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  .tablesorter-headerUnSorted{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0dc \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+}
+
+/*------------ JQUERY TRANSPOSER ------------*/
+span.c { 
+  font-weight: bold; 
+  color: $clr-primary;
+}
+
+.transpose-keys {
+  margin: 10px 0;
+  overflow: auto;
+  font-size:14px;
+  font-weight: bold;
+  ul{
+    display:inline-block;
+    margin:0;
+    padding:0;
+  }
+  a{
+    display: block;
+    float: left;
+    width: 2.25em;
+    text-align: center;
+    margin: 0 .25em .25em 0;
+    color: tint($clr-text,50); 
+    background: tint($clr-text,90);
+    @include border-radius(5px);
+    text-decoration: none;
+    padding: .4em 0;
+    border: solid 1px transparent;
+    border-bottom: solid 1px tint($clr-text,80);
+    outline: none;
+    &:hover{
+      background:tint($clr-text,95);
+    }
+    &.selected{
+      background: $clr-green;
+      @include text-shadow(0 -1px 0 rgba(0,0,0,0.5));
+      color: #FFF;
+      border-bottom: solid 1px darken($clr-green,20);
+    }
+  }
+  li{
+    list-style:none;
+  }
+}
