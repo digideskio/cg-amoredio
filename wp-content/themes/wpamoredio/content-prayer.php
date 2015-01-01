@@ -4,9 +4,7 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @package Amoredio
  */
 ?>
 
