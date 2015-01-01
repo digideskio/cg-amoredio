@@ -523,3 +523,32 @@ add_filter('single_template', create_function(
 		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
 	return $the_template;' )
 );
+
+/*
+ * Function to generate breadcrumb
+ */
+function the_breadcrumb() {
+	if (!is_home()) {
+		echo '<ol class="breadcrumb">';
+		echo '<li><a href="';
+		echo get_option('home');
+		echo '">';
+		bloginfo('name');
+		echo '</a></li>';
+		if (is_category() || is_single()) {
+			echo '<li>';
+			the_category('title_li=');
+			echo '</li>';
+			if (is_single()) {
+				echo '<li class="active">';
+				the_title();
+				echo '</li>';
+			}
+		} elseif (is_page()) {
+			echo '<li class="active">';
+			echo the_title();
+			echo '</li>';
+		}
+		echo '</ol>';
+	}
+}
