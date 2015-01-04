@@ -33,7 +33,7 @@ get_header(); ?>
            * use this in a child theme, then include a file called called content-___.php
            * (where ___ is the post format) and that will be used instead.
            */
-          get_template_part( 'content-blog', get_post_format() );
+          get_template_part( 'content-reading', get_post_format() );
           $categories = get_the_category($post->ID);
           $category_link = get_category_link( $categories[0]->cat_ID );
       ?>
