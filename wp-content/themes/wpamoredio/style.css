@@ -17,4 +17,5 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url('bower_components/normalize.css/normalize.css');
 @import url('css/custom-bootstrap.css');
 @import url('bower_components/fontawesome/css/font-awesome.min.css');
+@import url('vendor/jquery-chord-transposer/jquery.transposer.css');
 @import url('css/main.css');
